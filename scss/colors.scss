@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+// Colors file. All colors are included here
+// ---------------------------------------------------------------------------------------------------------------------
+@import "compass/css3";
+@import "compass/typography";
+
+@import "mixin";
+
+// DRUPAL BASE COLORS
+
+// NOTE: some colors can be altered by using sass functions within colors.scss 
+// (lighten, darken, etc.) - these colors, indicated below, will be adjusted
+// accordingly by color module when the theme is configured.
+$color_link: #476887;
+$color_text: #343434;
+$color_base: #5a6f82;
+
+// OTHER CONFIGURABLE COLORS
+$color_secondary: #404e5b;
+
+$color_bg: #ffffff; // Main page background
+$color_bg_secondary: #f7f7f7; // Triptych background
+
+$color_block_border: #cdd4da; // Borders
+
+$color_text_highlight: #fefefe; // Text with $color_base background
+
+$color_title: #2f2f2f;
+
+
+// NON-CONFIGURABLE COLORS
+$color_white: #fff;
+$color_black: #333;
+$color_grey: #666;
+$color_lightgrey: #777;
+
+
+// CALCULATED COLORS
+$color_base_dark: darken($color_base, 10%); // e.g. for highlighted elements that are not links, like ul.main-menu li.active
+$color_base_light: lighten($color_base, 10%);
+
+$color_link_dark: saturate(darken($color_link, 12%), 10%); // e.g. for a:hover
+$color_link_light: lighten($color_link, 10%);
+
+$color_text_dark: darken($color_text, 20%);
+$color_text_light: lighten($color_text, 50%); // e.g. for light text on light backgrounds
+
+@mixin invertcolor {
+  background-color: $color_base;
+  color: $color_text_highlight;
+}
+
+
+body {
+  background-color: $color_bg;
+  color: $color_text;
+}
+
+a {
+  color: $color_link;
+}
+
+a:hover {
+  color: $color_link_dark;
+}

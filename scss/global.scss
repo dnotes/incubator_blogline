@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+// Global stylesheet file
+// ---------------------------------------------------------------------------------------------------------------------
+@import "compass/css3";
+@import "compass/typography";
+
+@import "mixin";
+
+// Import base styles
+@import "base";
+
+// BASE FONT SIZE
+// ---------------------------------------------------------------------------------------------------------------------
+html {
+  font-size: 14px;
+}

@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// This file will hold styles for all layouts using the alpha grid (i.e. not the mobile layout).
+
+@import "compass/css3";
+@import "compass/typography";
+
+@import "mixin";
+
+html {
+  font-size: 14px;
+}
+
+// CONTENT GOES ON THE RIGHT
+// =============================================================================
+#region-content {
+  float:right;
+}
